@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "title": "€5 Discount Voucher",
+    "sponsor": "TechStore",
+    "points": 50,
+    "category": "Shopping",
+    "expires": "30 days",
+    "description": "Get €5 off your next purchase at TechStore",
+    "image": "https://images.unsplash.com/photo-1607082349566-187342175e2f?w=300&h=200&fit=crop"
+  },
+  {
+    "id": 2,
+    "title": "Free Coffee",
+    "sponsor": "CafeChain",
+    "points": 25,
+    "category": "Food & Drink",
+    "expires": "15 days",
+    "description": "Enjoy a free coffee at any CafeChain location",
+    "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=300&h=200&fit=crop"
+  },
+  {
+    "id": 3,
+    "title": "10% Off Next Purchase",
+    "sponsor": "FashionHub",
+    "points": 75,
+    "category": "Shopping",
+    "expires": "60 days",
+    "description": "Save 10% on your next fashion purchase",
+    "image": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=300&h=200&fit=crop"
+  },
+  {
+    "id": 4,
+    "title": "Free Movie Ticket",
+    "sponsor": "CinemaMax",
+    "points": 100,
+    "category": "Entertainment",
+    "expires": "45 days",
+    "description": "Watch any movie for free at CinemaMax",
+    "image": "https://images.unsplash.com/photo-1489599808414-4b8a8a8a8a8a?w=300&h=200&fit=crop"
+  },
+  {
+    "id": 5,
+    "title": "€20 Restaurant Voucher",
+    "sponsor": "FoodCourt",
+    "points": 150,
+    "category": "Food & Drink",
+    "expires": "90 days",
+    "description": "€20 off your meal at FoodCourt",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=300&h=200&fit=crop"
+  }
+]

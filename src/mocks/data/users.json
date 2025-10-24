@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "email": "john@example.com",
+    "uid": "USR-00X23-KV",
+    "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
+    "status": "active",
+    "activationLevel": 3,
+    "totalPoints": 165,
+    "createdAt": "2024-01-15T10:30:00Z"
+  },
+  {
+    "id": 2,
+    "name": "Clara Hughes",
+    "email": "clara@example.com",
+    "uid": "USR-0858CV",
+    "status": "blocked",
+    "activationLevel": 1,
+    "totalPoints": 45,
+    "createdAt": "2024-02-20T14:15:00Z"
+  },
+  {
+    "id": 3,
+    "name": "Daniel Fisher",
+    "email": "daniel@example.com",
+    "uid": "USR-030B5ZG",
+    "status": "inactive",
+    "activationLevel": 2,
+    "totalPoints": 78,
+    "createdAt": "2024-03-10T09:45:00Z"
+  }
+]

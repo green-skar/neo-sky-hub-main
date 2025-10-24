@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "date": "2025-10-20",
+    "amount": "KES 60",
+    "status": "completed",
+    "verified": true,
+    "videoUrl": "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
+    "mpesaRef": "QFX123456789"
+  },
+  {
+    "id": 2,
+    "date": "2025-10-13",
+    "amount": "KES 55",
+    "status": "completed",
+    "verified": true,
+    "videoUrl": "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4",
+    "mpesaRef": "QFX987654321"
+  },
+  {
+    "id": 3,
+    "date": "2025-10-06",
+    "amount": "KES 48",
+    "status": "pending",
+    "verified": false,
+    "videoUrl": null,
+    "mpesaRef": null
+  },
+  {
+    "id": 4,
+    "date": "2025-09-29",
+    "amount": "KES 72",
+    "status": "completed",
+    "verified": true,
+    "videoUrl": "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_5mb.mp4",
+    "mpesaRef": "QFX456789123"
+  },
+  {
+    "id": 5,
+    "date": "2025-09-22",
+    "amount": "KES 38",
+    "status": "completed",
+    "verified": true,
+    "videoUrl": null,
+    "mpesaRef": "QFX789123456"
+  }
+]

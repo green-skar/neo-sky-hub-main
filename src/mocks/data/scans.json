@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "time": "13:10",
+    "date": "Today",
+    "location": "Amsterdam",
+    "sponsor": "Digicomp",
+    "type": "QR Scan",
+    "verified": true,
+    "latitude": 52.3676,
+    "longitude": 4.9041
+  },
+  {
+    "id": 2,
+    "time": "16:20",
+    "date": "Friday",
+    "location": "The Hague",
+    "sponsor": "KE Airways",
+    "type": "NFC Tap",
+    "verified": true,
+    "latitude": 52.0705,
+    "longitude": 4.3007
+  },
+  {
+    "id": 3,
+    "time": "10:45",
+    "date": "Friday",
+    "location": "The Hague",
+    "sponsor": "Solarise",
+    "type": "QR Scan",
+    "verified": true,
+    "latitude": 52.0705,
+    "longitude": 4.3007
+  },
+  {
+    "id": 4,
+    "time": "14:30",
+    "date": "Thursday",
+    "location": "Rotterdam",
+    "sponsor": "TechCorp",
+    "type": "NFC Tap",
+    "verified": true,
+    "latitude": 51.9244,
+    "longitude": 4.4777
+  },
+  {
+    "id": 5,
+    "time": "09:15",
+    "date": "Wednesday",
+    "location": "Amsterdam",
+    "sponsor": "EcoStore",
+    "type": "QR Scan",
+    "verified": true,
+    "latitude": 52.3676,
+    "longitude": 4.9041
+  }
+]

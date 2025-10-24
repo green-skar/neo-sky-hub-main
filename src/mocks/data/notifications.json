@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "type": "reward",
+    "icon": "Gift",
+    "title": "New Reward Available",
+    "message": "You've unlocked a €5 discount voucher at TechStore",
+    "time": "5 minutes ago",
+    "read": false,
+    "category": "Rewards"
+  },
+  {
+    "id": 2,
+    "type": "security",
+    "icon": "Shield",
+    "title": "Security Alert",
+    "message": "Your blockchain hash has been verified successfully",
+    "time": "1 hour ago",
+    "read": false,
+    "category": "Security"
+  },
+  {
+    "id": 3,
+    "type": "achievement",
+    "icon": "TrendingUp",
+    "title": "Level Up!",
+    "message": "Congratulations! You've reached Silver level",
+    "time": "2 hours ago",
+    "read": true,
+    "category": "Achievements"
+  },
+  {
+    "id": 4,
+    "type": "sponsor",
+    "icon": "Bell",
+    "title": "Sponsor Update",
+    "message": "Digicomp has added new scan locations",
+    "time": "3 hours ago",
+    "read": true,
+    "category": "Sponsors"
+  },
+  {
+    "id": 5,
+    "type": "system",
+    "icon": "Settings",
+    "title": "System Maintenance",
+    "message": "Scheduled maintenance will occur tonight from 2-4 AM",
+    "time": "1 day ago",
+    "read": true,
+    "category": "System"
+  },
+  {
+    "id": 6,
+    "type": "reward",
+    "icon": "Gift",
+    "title": "Reward Expiring Soon",
+    "message": "Your free coffee reward expires in 3 days",
+    "time": "2 days ago",
+    "read": true,
+    "category": "Rewards"
+  }
+]
