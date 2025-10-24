@@ -76,8 +76,8 @@ const Rewards = () => {
 
   // Use real user data if available, fallback to static data
   const currentPoints = userData?.data?.totalPoints || 165;
-  const currentLevel = levels.find(l => currentPoints >= l.min && currentPoints < l.max) || levels[0];
-  const nextLevel = levels[levels.indexOf(currentLevel) + 1];
+  const currentLevel = LEVELS.find(l => currentPoints >= l.min && currentPoints < l.max) || LEVELS[0];
+  const nextLevel = LEVELS[LEVELS.indexOf(currentLevel) + 1];
   const progress = nextLevel 
     ? ((currentPoints - currentLevel.min) / (nextLevel.min - currentLevel.min)) * 100 
     : 100;
@@ -147,7 +147,7 @@ const Rewards = () => {
   };
 
   // Use API data if available, fallback to static data
-  const displayRewards = rewardsData?.data || rewards;
+  const displayRewards = rewardsData?.data || SAMPLE_REWARDS;
   const displayLevels = levelsData?.data || { currentLevel: currentLevel, progress, points: currentPoints };
   
   // Calculate stats from real data
