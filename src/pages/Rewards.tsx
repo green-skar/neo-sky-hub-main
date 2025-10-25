@@ -157,7 +157,7 @@ const Rewards = () => {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-3xl font-bold mb-2">Rewards & Ladder</h1>
+        <h1 className="text-3xl font-bold mb-2 text-neon-gold">Rewards & Ladder</h1>
         <p className="text-muted-foreground">Track your progress and redeem rewards</p>
         <div className="mt-2">
           <Button 
@@ -209,8 +209,8 @@ const Rewards = () => {
       </div>
 
       {/* Rewards Ladder */}
-      <Card className="p-6">
-        <h3 className="text-lg font-bold mb-6">Progression Ladder</h3>
+      <Card className="p-6 card-glow glow-purple">
+        <h3 className="text-lg font-bold mb-6 text-neon-purple">Progression Ladder</h3>
         <div className="space-y-4">
           {LEVELS.map((level, index) => {
             const isCompleted = currentPoints >= level.min;

@@ -55,24 +55,24 @@ export const Layout = ({ children }: LayoutProps) => {
       <Button
         variant="ghost"
         size="icon"
-        className="fixed top-4 left-4 z-50 lg:hidden"
+        className="fixed top-4 left-4 z-50 lg:hidden btn-glow glow-cyan"
         onClick={() => setSidebarOpen(!sidebarOpen)}
       >
-        {sidebarOpen ? <X /> : <Menu />}
+        {sidebarOpen ? <X className="text-neon-cyan" /> : <Menu className="text-neon-cyan" />}
       </Button>
 
       {/* Sidebar */}
       <aside
-        className={`fixed lg:sticky top-0 left-0 h-screen bg-card border-r border-border/50 z-40 transition-transform duration-300 ${
+        className={`fixed lg:sticky top-0 left-0 h-screen nav-glow z-40 transition-transform duration-300 ${
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         } lg:translate-x-0 w-72 overflow-y-auto`}
       >
         <div className="p-6">
           <div className="flex items-center gap-3 mb-8">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center font-bold text-primary-foreground">
+            <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center font-bold text-primary-foreground glow-cyan">
               K
             </div>
-            <h1 className="text-xl font-bold">Kardiverse</h1>
+            <h1 className="text-xl font-bold text-neon-cyan">Kardiverse</h1>
           </div>
 
           <nav className="space-y-2">
@@ -86,11 +86,11 @@ export const Layout = ({ children }: LayoutProps) => {
                   onClick={() => setSidebarOpen(false)}
                   className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-all ${
                     isActive
-                      ? "bg-primary/10 text-primary border border-primary/20 shadow-[0_0_20px_rgba(0,217,255,0.2)]"
-                      : "hover:bg-secondary text-muted-foreground hover:text-foreground"
+                      ? "bg-primary/10 text-primary border border-primary/20 glow-cyan"
+                      : "hover:bg-secondary text-muted-foreground hover:text-foreground hover:glow-cyan"
                   }`}
                 >
-                  <Icon className="w-5 h-5" />
+                  <Icon className={`w-5 h-5 ${isActive ? 'text-neon-cyan' : ''}`} />
                   <span className="font-medium">{item.label}</span>
                 </Link>
               );

@@ -76,7 +76,7 @@ export const AuthPage: React.FC = () => {
 
   return (
     <div className="min-h-screen flex justify-center items-center bg-background p-4">
-      <div className={`auth-container relative w-full max-w-[750px] h-[450px] sm:h-[500px] md:h-[450px] border-2 border-primary shadow-[0_0_25px_hsl(var(--primary))] overflow-hidden transition-all duration-700 ease-out ${isLogin ? '' : 'active'}`}>
+      <div className={`auth-container relative w-full max-w-[750px] h-[450px] sm:h-[500px] md:h-[450px] border-2 border-primary shadow-[0_0_25px_hsl(var(--primary))] overflow-hidden transition-all duration-700 ease-out glow-strong ${isLogin ? '' : 'active'}`}>
         {/* Curved Shapes - Desktop only */}
         <div className="curved-shape absolute right-0 -top-1 h-[600px] w-[850px] bg-gradient-to-br from-background to-primary transform rotate-[10deg] skew-y-[40deg] origin-bottom-right transition-all duration-[1.5s] delay-[1.6s] hidden lg:block"></div>
         <div className="curved-shape2 absolute left-[250px] top-full h-[700px] w-[850px] bg-background border-t-[3px] border-primary transform rotate-0 skew-y-0 origin-bottom-left transition-all duration-[1.5s] delay-[0.5s] hidden lg:block"></div>
@@ -131,7 +131,7 @@ export const AuthPage: React.FC = () => {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="btn relative w-full h-[40px] sm:h-[45px] bg-transparent rounded-[40px] cursor-pointer text-sm sm:text-base font-semibold border-2 border-primary overflow-hidden z-10 hover:before:top-0 transition-all duration-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="btn relative w-full h-[40px] sm:h-[45px] bg-transparent rounded-[40px] cursor-pointer text-sm sm:text-base font-semibold border-2 border-primary overflow-hidden z-10 hover:before:top-0 transition-all duration-500 disabled:opacity-50 disabled:cursor-not-allowed btn-glow-primary"
               >
                 {isLoading ? (
                   <div className="flex items-center justify-center gap-2">
@@ -235,7 +235,7 @@ export const AuthPage: React.FC = () => {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="btn relative w-full h-[40px] sm:h-[45px] bg-transparent rounded-[40px] cursor-pointer text-sm sm:text-base font-semibold border-2 border-primary overflow-hidden z-10 hover:before:top-0 transition-all duration-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="btn relative w-full h-[40px] sm:h-[45px] bg-transparent rounded-[40px] cursor-pointer text-sm sm:text-base font-semibold border-2 border-primary overflow-hidden z-10 hover:before:top-0 transition-all duration-500 disabled:opacity-50 disabled:cursor-not-allowed btn-glow-primary"
               >
                 {isLoading ? (
                   <div className="flex items-center justify-center gap-2">

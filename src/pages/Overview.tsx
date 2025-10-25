@@ -56,16 +56,16 @@ const Overview = () => {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-3xl font-bold mb-2">My NeoCard</h1>
+        <h1 className="text-3xl font-bold mb-2 text-neon-cyan">My NeoCard</h1>
         <p className="text-muted-foreground">Your digital loyalty card dashboard</p>
       </div>
 
       {/* AI Alert Banner */}
-      <Card className="border-accent/20 bg-accent/5 p-4">
+      <Card className="border-accent/20 bg-accent/5 p-4 card-glow glow-gold">
         <div className="flex items-start gap-3">
-          <TrendingUp className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+          <TrendingUp className="w-5 h-5 text-accent flex-shrink-0 mt-0.5 text-neon-gold" />
           <p className="text-sm">
-            <span className="font-semibold text-accent">Keep scanning!</span> Missions with more scans earn bigger rewards.
+            <span className="font-semibold text-accent text-neon-gold">Keep scanning!</span> Missions with more scans earn bigger rewards.
           </p>
         </div>
       </Card>
@@ -73,9 +73,9 @@ const Overview = () => {
       {/* Profile & Stats */}
       <div className="grid md:grid-cols-2 gap-6">
         {/* Profile Card */}
-        <Card className="p-6 border-primary/20 bg-gradient-to-br from-card to-card/50">
+        <Card className="p-6 border-primary/20 bg-gradient-to-br from-card to-card/50 card-glow card-glow-hover">
           <div className="flex flex-col items-center text-center">
-            <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 border-2 border-primary/30 mb-4 overflow-hidden flex items-center justify-center">
+            <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 border-2 border-primary/30 mb-4 overflow-hidden flex items-center justify-center glow-cyan">
               {user?.data?.avatar ? (
                 <img 
                   src={user.data.avatar} 
@@ -101,9 +101,9 @@ const Overview = () => {
                 {user?.data?.status?.toUpperCase() || "ACTIVE"}
               </Badge>
             </div>
-            <Button 
+            <Button
               variant="outline" 
-              className="border-primary/30 hover:bg-primary/10"
+              className="border-primary/30 hover:bg-primary/10 btn-glow"
               onClick={() => navigate('/settings')}
             >
               Edit Profile
@@ -141,22 +141,22 @@ const Overview = () => {
         <div className="space-y-6">
           {/* Quick Stats */}
           <div className="grid grid-cols-3 gap-4">
-            <Card className="p-4 border-primary/20">
+            <Card className="p-4 border-primary/20 card-glow glow-cyan">
               <p className="text-xs text-muted-foreground mb-1">REWARDS</p>
-              <p className="text-2xl font-bold text-primary">€16.50</p>
+              <p className="text-2xl font-bold text-primary text-neon-cyan">€16.50</p>
             </Card>
-            <Card className="p-4 border-primary/20">
+            <Card className="p-4 border-primary/20 card-glow glow-purple">
               <p className="text-xs text-muted-foreground mb-1">TOTAL SCANS</p>
-              <p className="text-lg font-bold">{scanStats?.data?.totalScans || "Loading..."}</p>
+              <p className="text-lg font-bold text-neon-purple">{scanStats?.data?.totalScans || "Loading..."}</p>
             </Card>
-            <Card className="p-4 border-primary/20">
+            <Card className="p-4 border-primary/20 card-glow glow-gold">
               <p className="text-xs text-muted-foreground mb-1">THIS WEEK</p>
-              <p className="text-lg font-bold">{scanStats?.data?.thisWeek || "Loading..."}</p>
+              <p className="text-lg font-bold text-neon-gold">{scanStats?.data?.thisWeek || "Loading..."}</p>
             </Card>
           </div>
 
           {/* M-Pesa Rewards */}
-          <Card className="p-6 border-accent/20 bg-gradient-to-br from-accent/5 to-transparent">
+          <Card className="p-6 border-accent/20 bg-gradient-to-br from-accent/5 to-transparent card-glow glow-gold">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center">
                 <span className="text-accent font-bold">₵</span>
@@ -228,8 +228,8 @@ const Overview = () => {
         </Card>
 
         {/* Scans Over Time Chart */}
-        <Card className="p-6">
-          <h3 className="text-lg font-bold mb-4">Scans Over Time</h3>
+        <Card className="p-6 card-glow chart-glow">
+          <h3 className="text-lg font-bold mb-4 text-neon-cyan">Scans Over Time</h3>
           {chartLoading ? (
             <div className="h-[200px] flex items-center justify-center">
               <Loader2 className="w-8 h-8 animate-spin text-muted-foreground" />
