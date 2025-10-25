@@ -132,7 +132,7 @@ const Media = () => {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-bold mb-2">Media & Proof Library</h1>
+          <h1 className="text-3xl font-bold mb-2 text-neon-gold neon-text-intense">Media & Proof Library</h1>
           <p className="text-muted-foreground">Photo proof and scan event history</p>
         </div>
         <Button variant="outline" className="border-primary/30" onClick={handleDownloadAll}>
@@ -142,44 +142,44 @@ const Media = () => {
       </div>
 
       {/* AI Verification Status */}
-      <Card className="p-6 border-primary/20 bg-gradient-to-br from-primary/5 to-transparent">
+      <Card className="p-6 border-primary/20 bg-gradient-to-br from-primary/5 to-transparent card-glow">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center">
-              <Shield className="w-8 h-8 text-primary" />
+            <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center card-glow">
+              <Shield className="w-8 h-8 text-primary neon-text" />
             </div>
             <div>
               <h3 className="text-xl font-bold mb-1">
                 AI
-                <span className="text-primary ml-2">SENTINEL</span>
+                <span className="text-primary ml-2 neon-text-intense">SENTINEL</span>
               </h3>
               <p className="text-sm text-muted-foreground">AI verification status</p>
             </div>
           </div>
-          <Badge className="bg-primary/20 text-primary border-primary/30 px-4 py-2">
-            <div className="w-2 h-2 bg-primary rounded-full animate-pulse mr-2" />
-            ACTIVE
+          <Badge className="bg-primary/20 text-primary border-primary/30 px-4 py-2 card-glow">
+            <div className="w-2 h-2 bg-primary rounded-full animate-pulse mr-2 neon-text" />
+            <span className="neon-text-intense">ACTIVE</span>
           </Badge>
         </div>
       </Card>
 
       {/* Stats */}
       <div className="grid md:grid-cols-4 gap-4">
-        <Card className="p-4 border-primary/20">
-          <p className="text-xs text-muted-foreground mb-1">TOTAL PROOFS</p>
-          <p className="text-2xl font-bold text-primary">{mediaStats?.data?.totalProofs || "Loading..."}</p>
+        <Card className="p-4 border-primary/20 card-glow">
+          <p className="text-xs text-muted-foreground mb-1 neon-text">TOTAL PROOFS</p>
+          <p className="text-2xl font-bold text-primary neon-text-intense">{mediaStats?.data?.totalProofs || "Loading..."}</p>
         </Card>
-        <Card className="p-4 border-primary/20">
-          <p className="text-xs text-muted-foreground mb-1">VERIFIED</p>
-          <p className="text-2xl font-bold text-accent">{mediaStats?.data?.verified || "Loading..."}</p>
+        <Card className="p-4 border-primary/20 card-glow">
+          <p className="text-xs text-muted-foreground mb-1 neon-text">VERIFIED</p>
+          <p className="text-2xl font-bold text-accent neon-text-intense">{mediaStats?.data?.verified || "Loading..."}</p>
         </Card>
-        <Card className="p-4 border-muted">
-          <p className="text-xs text-muted-foreground mb-1">PENDING</p>
-          <p className="text-2xl font-bold text-muted-foreground">{mediaStats?.data?.pending || "Loading..."}</p>
+        <Card className="p-4 border-muted card-glow">
+          <p className="text-xs text-muted-foreground mb-1 neon-text">PENDING</p>
+          <p className="text-2xl font-bold text-muted-foreground neon-text-intense">{mediaStats?.data?.pending || "Loading..."}</p>
         </Card>
-        <Card className="p-4 border-primary/20">
-          <p className="text-xs text-muted-foreground mb-1">FRAUD ALERTS</p>
-          <p className="text-2xl font-bold">{mediaStats?.data?.fraudAlerts || "Loading..."}</p>
+        <Card className="p-4 border-primary/20 card-glow">
+          <p className="text-xs text-muted-foreground mb-1 neon-text">FRAUD ALERTS</p>
+          <p className="text-2xl font-bold neon-text-intense">{mediaStats?.data?.fraudAlerts || "Loading..."}</p>
         </Card>
       </div>
 

@@ -56,16 +56,16 @@ const Overview = () => {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-3xl font-bold mb-2 text-neon-cyan">My NeoCard</h1>
+        <h1 className="text-3xl font-bold mb-2 text-neon-blue neon-text">My NeoCard</h1>
         <p className="text-muted-foreground">Your digital loyalty card dashboard</p>
       </div>
 
       {/* AI Alert Banner */}
-      <Card className="border-accent/20 bg-accent/5 p-4 card-glow glow-gold">
+      <Card className="border-accent/20 bg-accent/5 p-4 card-glow">
         <div className="flex items-start gap-3">
-          <TrendingUp className="w-5 h-5 text-accent flex-shrink-0 mt-0.5 text-neon-gold" />
+          <TrendingUp className="w-5 h-5 text-accent flex-shrink-0 mt-0.5 text-neon-blue" />
           <p className="text-sm">
-            <span className="font-semibold text-accent text-neon-gold">Keep scanning!</span> Missions with more scans earn bigger rewards.
+            <span className="font-semibold text-accent text-neon-blue">Keep scanning!</span> Missions with more scans earn bigger rewards.
           </p>
         </div>
       </Card>
@@ -75,7 +75,7 @@ const Overview = () => {
         {/* Profile Card */}
         <Card className="p-6 border-primary/20 bg-gradient-to-br from-card to-card/50 card-glow card-glow-hover">
           <div className="flex flex-col items-center text-center">
-            <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 border-2 border-primary/30 mb-4 overflow-hidden flex items-center justify-center glow-cyan">
+            <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 border-2 border-primary/30 mb-4 overflow-hidden flex items-center justify-center card-glow">
               {user?.data?.avatar ? (
                 <img 
                   src={user.data.avatar} 
@@ -91,12 +91,12 @@ const Overview = () => {
                 <User className="w-16 h-16 text-primary/60" />
               </div>
             </div>
-            <h2 className="text-2xl font-bold mb-1">{user?.data?.name || "Loading..."}</h2>
+            <h2 className="text-2xl font-bold mb-1 text-neon-blue neon-text">{user?.data?.name || "Loading..."}</h2>
             <div className="flex items-center gap-2 mb-4">
-              <Badge variant="outline" className="border-primary/30 text-primary">
+              <Badge variant="outline" className="border-primary/30 text-primary btn-glow">
                 {user?.data?.uid || "Loading..."}
               </Badge>
-              <Badge className="bg-primary/20 text-primary border-primary/30">
+              <Badge className="bg-primary/20 text-primary border-primary/30 btn-glow">
                 <CheckCircle2 className="w-3 h-3 mr-1" />
                 {user?.data?.status?.toUpperCase() || "ACTIVE"}
               </Badge>
@@ -141,39 +141,39 @@ const Overview = () => {
         <div className="space-y-6">
           {/* Quick Stats */}
           <div className="grid grid-cols-3 gap-4">
-            <Card className="p-4 border-primary/20 card-glow glow-cyan">
+            <Card className="p-4 border-primary/20 card-glow">
               <p className="text-xs text-muted-foreground mb-1">REWARDS</p>
-              <p className="text-2xl font-bold text-primary text-neon-cyan">€16.50</p>
+              <p className="text-2xl font-bold text-primary text-neon-blue neon-text-intense">€16.50</p>
             </Card>
-            <Card className="p-4 border-primary/20 card-glow glow-purple">
+            <Card className="p-4 border-primary/20 card-glow">
               <p className="text-xs text-muted-foreground mb-1">TOTAL SCANS</p>
-              <p className="text-lg font-bold text-neon-purple">{scanStats?.data?.totalScans || "Loading..."}</p>
+              <p className="text-lg font-bold text-neon-blue neon-text-intense">{scanStats?.data?.totalScans || "Loading..."}</p>
             </Card>
-            <Card className="p-4 border-primary/20 card-glow glow-gold">
+            <Card className="p-4 border-primary/20 card-glow">
               <p className="text-xs text-muted-foreground mb-1">THIS WEEK</p>
-              <p className="text-lg font-bold text-neon-gold">{scanStats?.data?.thisWeek || "Loading..."}</p>
+              <p className="text-lg font-bold text-neon-blue neon-text-intense">{scanStats?.data?.thisWeek || "Loading..."}</p>
             </Card>
           </div>
 
           {/* M-Pesa Rewards */}
-          <Card className="p-6 border-accent/20 bg-gradient-to-br from-accent/5 to-transparent card-glow glow-gold">
+          <Card className="p-6 border-accent/20 bg-gradient-to-br from-accent/5 to-transparent card-glow">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center">
-                <span className="text-accent font-bold">₵</span>
+              <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center card-glow">
+                <span className="text-accent font-bold neon-text-intense">₵</span>
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">Rewards</p>
-                <p className="text-2xl font-bold text-accent">M-PESA 60</p>
+                <p className="text-2xl font-bold text-accent neon-text-intense">M-PESA 60</p>
               </div>
             </div>
             <p className="text-sm text-muted-foreground">Total earned</p>
           </Card>
 
           {/* Proof of Activation */}
-          <Card className="p-6 border-primary/20">
+          <Card className="p-6 border-primary/20 card-glow">
             <h3 className="text-sm font-semibold mb-3">Proof of activation</h3>
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+              <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center card-glow">
                 <CheckCircle2 className="w-5 h-5 text-primary" />
               </div>
               <div>
@@ -188,7 +188,7 @@ const Overview = () => {
       {/* Scan History Section */}
       <div className="grid lg:grid-cols-2 gap-6">
         {/* Recent Scans Table */}
-        <Card className="p-6">
+        <Card className="p-6 card-glow">
           <h3 className="text-lg font-bold mb-4">Scan History</h3>
           <div className="space-y-3">
             <div className="grid grid-cols-3 text-xs font-semibold text-muted-foreground pb-2 border-b border-border/50">
@@ -229,7 +229,7 @@ const Overview = () => {
 
         {/* Scans Over Time Chart */}
         <Card className="p-6 card-glow chart-glow">
-          <h3 className="text-lg font-bold mb-4 text-neon-cyan">Scans Over Time</h3>
+          <h3 className="text-lg font-bold mb-4 text-neon-blue neon-text">Scans Over Time</h3>
           {chartLoading ? (
             <div className="h-[200px] flex items-center justify-center">
               <Loader2 className="w-8 h-8 animate-spin text-muted-foreground" />

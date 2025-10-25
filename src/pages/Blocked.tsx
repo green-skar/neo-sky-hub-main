@@ -129,22 +129,22 @@ const Blocked = () => {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-3xl font-bold mb-2">Lost / Blocked Card Manager</h1>
+        <h1 className="text-3xl font-bold mb-2 text-neon-red neon-text-intense">Lost / Blocked Card Manager</h1>
         <p className="text-muted-foreground">
           Manage NeoCards lost by users and flagged by AI for fraudulent activity
         </p>
       </div>
 
       {/* AI Alert */}
-      <Card className="border-destructive/20 bg-destructive/5 p-4">
+      <Card className="border-destructive/20 bg-destructive/5 p-4 card-glow">
         <div className="flex items-start gap-3">
-          <AlertTriangle className="w-5 h-5 text-destructive flex-shrink-0 mt-0.5" />
+          <AlertTriangle className="w-5 h-5 text-destructive flex-shrink-0 mt-0.5 neon-text-red" />
           <div>
-            <p className="font-semibold text-destructive mb-1">AI ALERT</p>
-            <p className="text-sm">
+            <p className="font-semibold text-destructive mb-1 neon-text-red">AI ALERT</p>
+            <p className="text-sm neon-text">
               Fraudulent UID Detected - blocChain hash: 057d73ab015d4c33856abcab4e007cfaf6ef79...
             </p>
-            <Button variant="link" className="text-destructive h-auto p-0 mt-2" size="sm">
+            <Button variant="link" className="text-destructive h-auto p-0 mt-2 neon-text-red" size="sm">
               VIEW ALERT
             </Button>
           </div>
@@ -153,25 +153,25 @@ const Blocked = () => {
 
       {/* Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <Card className="p-4 border-destructive/20">
-          <p className="text-xs text-muted-foreground mb-1">ACTIVE</p>
-          <p className="text-2xl font-bold">317</p>
-          <p className="text-xs text-muted-foreground mt-1">NeoCards</p>
+        <Card className="p-4 card-glow">
+          <p className="text-xs text-muted-foreground mb-1 neon-text">ACTIVE</p>
+          <p className="text-2xl font-bold neon-text-intense">317</p>
+          <p className="text-xs text-muted-foreground mt-1 neon-text">NeoCards</p>
         </Card>
-        <Card className="p-4 border-primary/20">
-          <p className="text-xs text-muted-foreground mb-1">REACTIVATED</p>
-          <p className="text-2xl font-bold text-primary">24</p>
-          <p className="text-xs text-muted-foreground mt-1">NeoCards this month</p>
+        <Card className="p-4 card-glow">
+          <p className="text-xs text-muted-foreground mb-1 neon-text">REACTIVATED</p>
+          <p className="text-2xl font-bold text-primary neon-text-intense">24</p>
+          <p className="text-xs text-muted-foreground mt-1 neon-text">NeoCards this month</p>
         </Card>
-        <Card className="p-4 border-muted">
-          <p className="text-xs text-muted-foreground mb-1">LOST</p>
-          <p className="text-2xl font-bold text-muted-foreground">82</p>
-          <p className="text-xs text-muted-foreground mt-1">NeoCards</p>
+        <Card className="p-4 card-glow">
+          <p className="text-xs text-muted-foreground mb-1 neon-text">LOST</p>
+          <p className="text-2xl font-bold text-muted-foreground neon-text-intense">82</p>
+          <p className="text-xs text-muted-foreground mt-1 neon-text">NeoCards</p>
         </Card>
-        <Card className="p-4 border-muted">
-          <p className="text-xs text-muted-foreground mb-1">PENDING</p>
-          <p className="text-2xl font-bold text-muted-foreground">6</p>
-          <p className="text-xs text-muted-foreground mt-1">NeoCards</p>
+        <Card className="p-4 card-glow">
+          <p className="text-xs text-muted-foreground mb-1 neon-text">PENDING</p>
+          <p className="text-2xl font-bold text-muted-foreground neon-text-intense">6</p>
+          <p className="text-xs text-muted-foreground mt-1 neon-text">NeoCards</p>
         </Card>
       </div>
 

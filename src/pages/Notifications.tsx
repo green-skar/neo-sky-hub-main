@@ -150,7 +150,7 @@ const Notifications = () => {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-bold mb-2">Notifications & Alerts</h1>
+          <h1 className="text-3xl font-bold mb-2 text-neon-blue neon-text-intense">Notifications & Alerts</h1>
           <p className="text-muted-foreground">Stay updated with AI-powered smart notifications</p>
         </div>
         <Button variant="outline" className="border-primary/30" onClick={markAllAsRead}>
@@ -160,21 +160,21 @@ const Notifications = () => {
 
       {/* Stats */}
       <div className="grid md:grid-cols-4 gap-4">
-        <Card className="p-4 border-primary/20">
-          <p className="text-xs text-muted-foreground mb-1">UNREAD</p>
-          <p className="text-2xl font-bold text-primary">{unreadCount}</p>
+        <Card className="p-4 card-glow">
+          <p className="text-xs text-muted-foreground mb-1 neon-text">UNREAD</p>
+          <p className="text-2xl font-bold text-primary neon-text-intense">{unreadCount}</p>
         </Card>
-        <Card className="p-4 border-primary/20">
-          <p className="text-xs text-muted-foreground mb-1">TODAY</p>
-          <p className="text-2xl font-bold">{todayCount}</p>
+        <Card className="p-4 card-glow">
+          <p className="text-xs text-muted-foreground mb-1 neon-text">TODAY</p>
+          <p className="text-2xl font-bold neon-text-intense">{todayCount}</p>
         </Card>
-        <Card className="p-4 border-accent/20">
-          <p className="text-xs text-muted-foreground mb-1">REWARDS</p>
-          <p className="text-2xl font-bold text-accent">{rewardsCount}</p>
+        <Card className="p-4 card-glow">
+          <p className="text-xs text-muted-foreground mb-1 neon-text">REWARDS</p>
+          <p className="text-2xl font-bold text-accent neon-text-intense">{rewardsCount}</p>
         </Card>
-        <Card className="p-4 border-primary/20">
-          <p className="text-xs text-muted-foreground mb-1">SECURITY</p>
-          <p className="text-2xl font-bold">{securityCount}</p>
+        <Card className="p-4 card-glow">
+          <p className="text-xs text-muted-foreground mb-1 neon-text">SECURITY</p>
+          <p className="text-2xl font-bold neon-text-intense">{securityCount}</p>
         </Card>
       </div>
 

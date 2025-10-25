@@ -91,12 +91,12 @@ const Audit = () => {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-3xl font-bold mb-2">Audit Log & Blockchain Hash Recorder</h1>
+        <h1 className="text-3xl font-bold mb-2 text-neon-red neon-text-intense">Audit Log & Blockchain Hash Recorder</h1>
         <p className="text-muted-foreground">Immutable on-chain records of all activations</p>
       </div>
 
       {/* Alert Banner */}
-      <Card className="border-primary/20 bg-primary/5 p-4">
+      <Card className="border-primary/20 bg-primary/5 p-4 card-glow glow-red">
         <div className="flex items-start gap-3">
           <Shield className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
           <p className="text-sm">
@@ -108,27 +108,27 @@ const Audit = () => {
 
       {/* Blockchain Stats */}
       <div className="grid md:grid-cols-4 gap-4">
-        <Card className="p-4 border-primary/20">
-          <p className="text-xs text-muted-foreground mb-1">CURRENT BLOCK</p>
-          <p className="text-2xl font-bold text-primary">744,642</p>
+        <Card className="p-4 border-primary/20 card-glow">
+          <p className="text-xs text-muted-foreground mb-1 neon-text">CURRENT BLOCK</p>
+          <p className="text-2xl font-bold text-primary neon-text-intense">744,642</p>
         </Card>
-        <Card className="p-4 border-primary/20">
-          <p className="text-xs text-muted-foreground mb-1">VERIFIED RECORDS</p>
-          <p className="text-2xl font-bold">127</p>
+        <Card className="p-4 border-primary/20 card-glow">
+          <p className="text-xs text-muted-foreground mb-1 neon-text">VERIFIED RECORDS</p>
+          <p className="text-2xl font-bold neon-text-intense">127</p>
         </Card>
-        <Card className="p-4 border-primary/20">
-          <p className="text-xs text-muted-foreground mb-1">PENDING</p>
-          <p className="text-2xl font-bold">1</p>
+        <Card className="p-4 border-primary/20 card-glow">
+          <p className="text-xs text-muted-foreground mb-1 neon-text">PENDING</p>
+          <p className="text-2xl font-bold neon-text-intense">1</p>
         </Card>
-        <Card className="p-4 border-primary/20">
-          <p className="text-xs text-muted-foreground mb-1">LATENCY</p>
-          <p className="text-2xl font-bold text-primary">122ms</p>
+        <Card className="p-4 border-primary/20 card-glow">
+          <p className="text-xs text-muted-foreground mb-1 neon-text">LATENCY</p>
+          <p className="text-2xl font-bold text-primary neon-text-intense">122ms</p>
         </Card>
       </div>
 
       {/* Current Hash */}
       <Card className="p-6 border-primary/20 bg-gradient-to-br from-primary/5 to-transparent">
-        <h3 className="text-lg font-bold mb-4">Current Blockchain Hash</h3>
+        <h3 className="text-lg font-bold mb-4 text-neon-blue neon-text-intense">Current Blockchain Hash</h3>
         <div className="flex items-center gap-3 mb-4">
           <div className="flex-1 bg-secondary/50 rounded-lg p-4 font-mono text-sm break-all">
             0xa7f92e9F5b332aaA12d
@@ -157,7 +157,7 @@ const Audit = () => {
       {/* Recent Activations */}
       <Card className="p-6">
         <div className="flex items-center justify-between mb-6">
-          <h3 className="text-lg font-bold">Recent Activations</h3>
+          <h3 className="text-lg font-bold text-neon-blue neon-text-intense">Recent Activations</h3>
           <Button 
             variant="outline" 
             className="border-primary/30" 
@@ -212,7 +212,7 @@ const Audit = () => {
 
       {/* Hash Verification Tool */}
       <Card className="p-6 border-primary/20">
-        <h3 className="text-lg font-bold mb-4">Hash Verification Tool</h3>
+        <h3 className="text-lg font-bold mb-4 text-neon-blue neon-text-intense">Hash Verification Tool</h3>
         <p className="text-sm text-muted-foreground mb-4">
           Verify any blockchain hash to confirm authenticity and timestamp
         </p>

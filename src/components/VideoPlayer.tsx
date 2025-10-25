@@ -116,7 +116,7 @@ const VideoPlayer = ({
 
   if (error) {
     return (
-      <div className={`relative bg-black rounded-lg overflow-hidden ${className}`}>
+      <div className={`relative bg-black rounded-lg overflow-hidden card-glow glow-purple ${className}`}>
         <div className="aspect-video flex items-center justify-center bg-secondary/30">
           <div className="text-center">
             <Play className="w-16 h-16 text-muted-foreground mx-auto mb-3" />

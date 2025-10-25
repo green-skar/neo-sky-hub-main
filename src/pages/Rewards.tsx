@@ -12,11 +12,11 @@ import { useToast } from "@/hooks/use-toast";
 
 // Constants for better maintainability
 const LEVELS = [
-  { name: "Bronze", min: 0, max: 100, color: "from-orange-900 to-orange-700" },
-  { name: "Silver", min: 100, max: 250, color: "from-gray-400 to-gray-300" },
-  { name: "Gold", min: 250, max: 500, color: "from-yellow-600 to-yellow-400" },
-  { name: "Platinum", min: 500, max: 1000, color: "from-cyan-600 to-cyan-400" },
-  { name: "Diamond", min: 1000, max: 9999, color: "from-purple-600 to-purple-400" },
+  { name: "Bronze", min: 0, max: 100, color: "from-orange-600/20 to-orange-500/20", trophyColor: "text-orange-500" },
+  { name: "Silver", min: 100, max: 250, color: "from-slate-600/20 to-slate-500/20", trophyColor: "text-slate-400" },
+  { name: "Gold", min: 250, max: 500, color: "from-yellow-600/20 to-yellow-500/20", trophyColor: "text-yellow-500" },
+  { name: "Platinum", min: 500, max: 1000, color: "from-cyan-600/20 to-cyan-500/20", trophyColor: "text-cyan-500" },
+  { name: "Diamond", min: 1000, max: 9999, color: "from-purple-600/20 to-purple-500/20", trophyColor: "text-purple-500" },
 ] as const;
 
 const SAMPLE_REWARDS = [
@@ -47,10 +47,10 @@ const SAMPLE_REWARDS = [
 ] as const;
 
 const ACHIEVEMENTS = [
-  { id: 1, title: "First Scan", icon: Zap, unlocked: true },
-  { id: 2, title: "Week Warrior", icon: Star, unlocked: true },
-  { id: 3, title: "Multi-Location", icon: Trophy, unlocked: true },
-  { id: 4, title: "100 Scans", icon: Gift, unlocked: false },
+  { id: 1, title: "First Scan", icon: Zap, unlocked: true, color: "text-yellow-500" },
+  { id: 2, title: "Week Warrior", icon: Star, unlocked: true, color: "text-purple-500" },
+  { id: 3, title: "Multi-Location", icon: Trophy, unlocked: true, color: "text-green-500" },
+  { id: 4, title: "100 Scans", icon: Gift, unlocked: false, color: "text-orange-500" },
 ] as const;
 
 const Rewards = () => {
@@ -157,7 +157,7 @@ const Rewards = () => {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-3xl font-bold mb-2 text-neon-gold">Rewards & Ladder</h1>
+        <h1 className="text-3xl font-bold mb-2 text-neon-gold neon-text-intense">Rewards & Ladder</h1>
         <p className="text-muted-foreground">Track your progress and redeem rewards</p>
         <div className="mt-2">
           <Button 
@@ -172,45 +172,45 @@ const Rewards = () => {
       </div>
 
       {/* Current Level Card */}
-      <Card className={`p-6 bg-gradient-to-br ${currentLevel.color} border-0`}>
+      <Card className={`p-6 bg-gradient-to-br ${currentLevel.color} border-primary/20 card-glow`}>
         <div className="flex items-center justify-between mb-4">
           <div>
-            <p className="text-sm opacity-90 mb-1">Current Level</p>
-            <h2 className="text-3xl font-bold text-white">{currentLevel.name}</h2>
+            <p className="text-sm text-muted-foreground mb-1">Current Level</p>
+            <h2 className="text-3xl font-bold text-neon-blue neon-text-intense">{currentLevel.name}</h2>
           </div>
-          <div className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-sm">
-            <Trophy className="w-8 h-8 text-white" />
+          <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center card-glow">
+            <Trophy className={`w-8 h-8 ${currentLevel.trophyColor}`} />
           </div>
         </div>
         
         <div className="space-y-2">
-          <div className="flex justify-between text-sm text-white/90">
-            <span>{currentPoints} points</span>
-            {nextLevel && <span>{nextLevel.min} points to {nextLevel.name}</span>}
+          <div className="flex justify-between text-sm text-muted-foreground">
+            <span className="neon-text">{currentPoints} points</span>
+            {nextLevel && <span className="neon-text">{nextLevel.min} points to {nextLevel.name}</span>}
           </div>
-          <Progress value={progress} className="h-3 bg-white/20" />
+          <Progress value={progress} className="h-3 bg-primary/20" />
         </div>
       </Card>
 
       {/* Points Summary */}
       <div className="grid md:grid-cols-3 gap-4">
-        <Card className="p-4 border-primary/20">
-          <p className="text-xs text-muted-foreground mb-1">TOTAL POINTS</p>
-          <p className="text-2xl font-bold text-primary">{currentPoints}</p>
+        <Card className="p-4 border-primary/20 card-glow">
+          <p className="text-xs text-muted-foreground mb-1 neon-text">TOTAL POINTS</p>
+          <p className="text-2xl font-bold text-primary neon-text-intense">{currentPoints}</p>
         </Card>
-        <Card className="p-4 border-accent/20">
-          <p className="text-xs text-muted-foreground mb-1">AVAILABLE REWARDS</p>
-          <p className="text-2xl font-bold text-accent">{availableRewardsCount}</p>
+        <Card className="p-4 border-accent/20 card-glow">
+          <p className="text-xs text-muted-foreground mb-1 neon-text">AVAILABLE REWARDS</p>
+          <p className="text-2xl font-bold text-accent neon-text-intense">{availableRewardsCount}</p>
         </Card>
-        <Card className="p-4 border-primary/20">
-          <p className="text-xs text-muted-foreground mb-1">REDEEMED</p>
-          <p className="text-2xl font-bold">{redeemedRewardsCount}</p>
+        <Card className="p-4 border-primary/20 card-glow">
+          <p className="text-xs text-muted-foreground mb-1 neon-text">REDEEMED</p>
+          <p className="text-2xl font-bold neon-text-intense">{redeemedRewardsCount}</p>
         </Card>
       </div>
 
       {/* Rewards Ladder */}
       <Card className="p-6 card-glow glow-purple">
-        <h3 className="text-lg font-bold mb-6 text-neon-purple">Progression Ladder</h3>
+        <h3 className="text-lg font-bold mb-6 text-neon-blue neon-text-intense">Progression Ladder</h3>
         <div className="space-y-4">
           {LEVELS.map((level, index) => {
             const isCompleted = currentPoints >= level.min;
@@ -226,7 +226,7 @@ const Rewards = () => {
                 }`}
               >
                 <div className={`w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-br ${level.color}`}>
-                  <Trophy className="w-6 h-6 text-white" />
+                  <Trophy className={`w-6 h-6 ${level.trophyColor}`} />
                 </div>
                 
                 <div className="flex-1">
@@ -255,12 +255,12 @@ const Rewards = () => {
       </Card>
 
       {/* Available Rewards */}
-      <Card className="p-6">
+      <Card className="p-6 card-glow glow-purple">
         <div className="flex items-center justify-between mb-6">
-          <h3 className="text-lg font-bold">Available Coupons & Rewards</h3>
+          <h3 className="text-lg font-bold text-neon-blue neon-text-intense">Available Coupons & Rewards</h3>
           <Button 
             variant="outline" 
-            className="border-primary/30" 
+            className="border-primary/30 btn-glow" 
             size="sm"
             onClick={handleViewAll}
           >
@@ -273,7 +273,7 @@ const Rewards = () => {
           {rewardsLoading ? (
             // Loading skeleton
             Array.from({ length: 3 }).map((_, index) => (
-              <Card key={index} className="p-4 border-primary/20">
+              <Card key={index} className="p-4 border-primary/20 card-glow">
                 <div className="space-y-3">
                   <div className="flex items-start justify-between">
                     <Skeleton className="h-5 w-16" />
@@ -290,22 +290,22 @@ const Rewards = () => {
             ))
           ) : (
             (showAllRewards ? displayRewards : displayRewards.slice(0, 3)).map((reward) => (
-              <Card key={reward.id} className="p-4 border-primary/20 hover:border-primary/40 transition-colors">
+              <Card key={reward.id} className="p-4 border-primary/20 hover:border-primary/40 transition-colors card-glow">
                 <div className="flex items-start justify-between mb-3">
-                  <Badge variant="outline" className="text-xs">
+                  <Badge variant="outline" className="text-xs neon-text">
                     {reward.category}
                   </Badge>
-                  <span className="text-xs text-muted-foreground">{reward.expiryDate ? new Date(reward.expiryDate).toLocaleDateString() : reward.expires}</span>
+                  <span className="text-xs text-muted-foreground neon-text">{reward.expiryDate ? new Date(reward.expiryDate).toLocaleDateString() : reward.expires}</span>
                 </div>
                 
                 <h4 className="font-semibold mb-1">{reward.title}</h4>
                 <p className="text-sm text-muted-foreground mb-4">{reward.sponsor || 'N/A'}</p>
                 
                 <div className="flex items-center justify-between">
-                  <span className="text-lg font-bold text-accent">{reward.points} pts</span>
+                  <span className="text-lg font-bold text-accent neon-text-intense">{reward.points} pts</span>
                   <Button 
                     size="sm" 
-                    className="bg-primary/20 text-primary hover:bg-primary hover:text-primary-foreground"
+                    className="bg-primary/20 text-primary hover:bg-primary hover:text-primary-foreground btn-glow-primary"
                     onClick={() => handleRedeem(reward.id)}
                     disabled={redeemingReward === reward.id}
                   >
@@ -319,28 +319,28 @@ const Rewards = () => {
       </Card>
 
       {/* Achievements */}
-      <Card className="p-6">
-        <h3 className="text-lg font-bold mb-6">Achievement Badges</h3>
+      <Card className="p-6 card-glow glow-green">
+        <h3 className="text-lg font-bold mb-6 text-neon-green neon-text-intense">Achievement Badges</h3>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {ACHIEVEMENTS.map((achievement) => {
             const Icon = achievement.icon;
             return (
               <div
                 key={achievement.id}
-                className={`p-4 rounded-lg text-center ${
+                className={`p-4 rounded-lg text-center card-glow ${
                   achievement.unlocked
                     ? "bg-primary/10 border-2 border-primary/30"
                     : "bg-secondary/30 opacity-50"
                 }`}
               >
-                <div className={`w-16 h-16 rounded-full mx-auto mb-3 flex items-center justify-center ${
+                <div className={`w-16 h-16 rounded-full mx-auto mb-3 flex items-center justify-center card-glow ${
                   achievement.unlocked
                     ? "bg-primary/20"
                     : "bg-muted"
                 }`}>
-                  <Icon className={`w-8 h-8 ${achievement.unlocked ? "text-primary" : "text-muted-foreground"}`} />
+                  <Icon className={`w-8 h-8 ${achievement.unlocked ? achievement.color : "text-muted-foreground"}`} />
                 </div>
-                <p className="text-sm font-medium">{achievement.title}</p>
+                <p className="text-sm font-medium neon-text">{achievement.title}</p>
               </div>
             );
           })}

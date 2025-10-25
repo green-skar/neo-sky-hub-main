@@ -31,12 +31,12 @@ const SettingsPage = () => {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-3xl font-bold mb-2">Settings & AI Support</h1>
+        <h1 className="text-3xl font-bold mb-2 text-neon-cyan neon-text-intense">Settings & AI Support</h1>
         <p className="text-muted-foreground">Manage your preferences and get AI-powered assistance</p>
       </div>
 
       {/* AI Support Chat */}
-      <Card className="p-6 border-primary/20 bg-gradient-to-br from-primary/5 to-transparent">
+      <Card className="p-6 border-primary/20 bg-gradient-to-br from-primary/5 to-transparent card-glow glow-cyan">
         <div className="flex items-start gap-4 mb-6">
           <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
             <MessageSquare className="w-8 h-8 text-primary" />
@@ -58,12 +58,12 @@ const SettingsPage = () => {
       {/* Settings Categories */}
       <div className="grid md:grid-cols-2 gap-6">
         {/* Account Settings */}
-        <Card className="p-6">
+        <Card className="p-6 card-glow glow-purple">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
               <User className="w-5 h-5 text-primary" />
             </div>
-            <h3 className="text-lg font-bold">Account Settings</h3>
+            <h3 className="text-lg font-bold text-neon-blue neon-text-intense">Account Settings</h3>
           </div>
           <div className="space-y-3">
             {["Edit Profile", "Change Password", "Privacy Settings", "Connected Accounts"].map((setting) => (
@@ -79,12 +79,12 @@ const SettingsPage = () => {
         </Card>
 
         {/* Notifications */}
-        <Card className="p-6">
+        <Card className="p-6 card-glow glow-purple">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
               <Bell className="w-5 h-5 text-primary" />
             </div>
-            <h3 className="text-lg font-bold">Notifications</h3>
+            <h3 className="text-lg font-bold text-neon-blue neon-text-intense">Notifications</h3>
           </div>
           <div className="space-y-3">
             {["Email Notifications", "Push Notifications", "SMS Alerts", "Notification Frequency"].map(
@@ -102,12 +102,12 @@ const SettingsPage = () => {
         </Card>
 
         {/* Security */}
-        <Card className="p-6">
+        <Card className="p-6 card-glow glow-purple">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
               <Shield className="w-5 h-5 text-primary" />
             </div>
-            <h3 className="text-lg font-bold">Security</h3>
+            <h3 className="text-lg font-bold text-neon-blue neon-text-intense">Security</h3>
           </div>
           <div className="space-y-3">
             {[
@@ -128,12 +128,12 @@ const SettingsPage = () => {
         </Card>
 
         {/* Data Management */}
-        <Card className="p-6">
+        <Card className="p-6 card-glow glow-purple">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
               <Database className="w-5 h-5 text-primary" />
             </div>
-            <h3 className="text-lg font-bold">Data Management</h3>
+            <h3 className="text-lg font-bold text-neon-blue neon-text-intense">Data Management</h3>
           </div>
           <div className="space-y-3">
             {["Export Data", "Download Reports", "Data Privacy", "Delete Account"].map((setting) => (
@@ -150,7 +150,7 @@ const SettingsPage = () => {
       </div>
 
       {/* Helpdesk */}
-      <Card className="p-6 border-accent/20">
+      <Card className="p-6 border-accent/20 card-glow glow-gold">
         <div className="flex items-start gap-4">
           <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
             <HelpCircle className="w-6 h-6 text-accent" />

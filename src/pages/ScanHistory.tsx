@@ -125,7 +125,7 @@ const ScanHistory = () => {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-bold mb-2">Scan History</h1>
+          <h1 className="text-3xl font-bold mb-2 text-neon-blue neon-text-intense">Scan History</h1>
           <p className="text-muted-foreground">Timeline of all your QR/NFC interactions</p>
         </div>
         <div className="flex gap-2">
@@ -152,19 +152,19 @@ const ScanHistory = () => {
       <div className="grid md:grid-cols-4 gap-4">
         <Card className="p-4 border-primary/20">
           <p className="text-xs text-muted-foreground mb-1">TOTAL SCANS</p>
-          <p className="text-2xl font-bold text-primary">{scanStats?.data?.totalScans || "Loading..."}</p>
+          <p className="text-2xl font-bold text-primary neon-text-intense">{scanStats?.data?.totalScans || "Loading..."}</p>
         </Card>
         <Card className="p-4 border-accent/20">
           <p className="text-xs text-muted-foreground mb-1">THIS WEEK</p>
-          <p className="text-2xl font-bold text-accent">{scanStats?.data?.thisWeek || "Loading..."}</p>
+          <p className="text-2xl font-bold text-accent neon-text-intense">{scanStats?.data?.thisWeek || "Loading..."}</p>
         </Card>
         <Card className="p-4 border-primary/20">
           <p className="text-xs text-muted-foreground mb-1">UNIQUE LOCATIONS</p>
-          <p className="text-2xl font-bold">{scanStats?.data?.uniqueLocations || "Loading..."}</p>
+          <p className="text-2xl font-bold neon-text-intense">{scanStats?.data?.uniqueLocations || "Loading..."}</p>
         </Card>
         <Card className="p-4 border-primary/20">
           <p className="text-xs text-muted-foreground mb-1">SPONSORS</p>
-          <p className="text-2xl font-bold">{scanStats?.data?.sponsors || "Loading..."}</p>
+          <p className="text-2xl font-bold neon-text-intense">{scanStats?.data?.sponsors || "Loading..."}</p>
         </Card>
       </div>
 
@@ -215,7 +215,7 @@ const ScanHistory = () => {
       )}
 
       {/* Scan Timeline */}
-      <Card className="p-6">
+      <Card className="p-6 card-glow glow-purple">
         <h3 className="text-lg font-bold mb-6">Recent Activity</h3>
         <div className="space-y-4">
           {scansLoading ? (
@@ -292,7 +292,7 @@ const ScanHistory = () => {
       </Card>
 
       {/* Map Integration */}
-      <Card id="scan-map" className="p-6 border-primary/20 relative z-10">
+      <Card id="scan-map" className="p-6 border-primary/20 relative z-10 card-glow glow-cyan">
         <h3 className="text-lg font-bold mb-4">Scan Locations</h3>
         {mapLoading ? (
           <div className="h-64 rounded-lg bg-secondary/30 flex items-center justify-center border border-border/50">

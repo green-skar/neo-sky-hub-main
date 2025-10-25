@@ -120,7 +120,7 @@ const AIChat = ({ className = "" }: AIChatProps) => {
               </div>
             )}
             
-            <Card className={`max-w-[80%] p-3 ${
+            <Card className={`max-w-[80%] p-3 card-glow glow-cyan ${
               message.role === 'user'
                 ? 'bg-primary text-primary-foreground'
                 : 'bg-secondary/50'
@@ -146,7 +146,7 @@ const AIChat = ({ className = "" }: AIChatProps) => {
             <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
               <Bot className="w-4 h-4 text-primary" />
             </div>
-            <Card className="bg-secondary/50 p-3">
+            <Card className="bg-secondary/50 p-3 card-glow glow-gold">
               <div className="flex items-center gap-2">
                 <Loader2 className="w-4 h-4 animate-spin" />
                 <p className="text-sm text-muted-foreground">AI is thinking...</p>

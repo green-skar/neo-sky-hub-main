@@ -1,7 +1,7 @@
 import { ApiResponse } from '@/types';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
 const IS_DEMO = import.meta.env.VITE_DEMO === '1' || import.meta.env.VITE_DEMO === undefined || true; // Default to demo mode
+const API_BASE_URL = IS_DEMO ? '/api' : (import.meta.env.VITE_API_URL || 'http://localhost:3001/api');
 
 console.log('API Client initialization:', {
   VITE_DEMO: import.meta.env.VITE_DEMO,

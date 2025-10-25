@@ -84,7 +84,7 @@ const FileUpload = ({
     <div className={`space-y-4 ${className}`}>
       <div
         {...getRootProps()}
-        className={`border-2 border-dashed rounded-lg p-8 text-center cursor-pointer transition-colors ${
+        className={`border-2 border-dashed rounded-lg p-8 text-center cursor-pointer transition-colors card-glow glow-green ${
           isDragActive
             ? 'border-primary bg-primary/5'
             : 'border-border hover:border-primary/50'

@@ -315,37 +315,37 @@ const MPesa = () => {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-3xl font-bold mb-2">M-Pesa & Payouts</h1>
+        <h1 className="text-3xl font-bold mb-2 text-neon-green neon-text-intense">M-Pesa & Payouts</h1>
         <p className="text-muted-foreground">Track your earnings and payment history</p>
       </div>
 
       {/* Earnings Summary */}
       <div className="grid md:grid-cols-3 gap-4">
-        <Card className="p-6 border-accent/20 bg-gradient-to-br from-accent/5 to-transparent">
+        <Card className="p-6 border-accent/20 bg-gradient-to-br from-accent/5 to-transparent card-glow glow-gold">
           <div className="flex items-center gap-3 mb-2">
-            <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center">
-              <Wallet className="w-6 h-6 text-accent" />
+            <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center card-glow">
+              <Wallet className="w-6 h-6 text-accent neon-text" />
             </div>
             <div>
-              <p className="text-sm text-muted-foreground">Total Balance</p>
-              <p className="text-3xl font-bold text-accent">KES 60</p>
+              <p className="text-sm text-muted-foreground neon-text">Total Balance</p>
+              <p className="text-3xl font-bold text-accent neon-text-intense">KES 60</p>
             </div>
           </div>
         </Card>
 
-        <Card className="p-4 border-primary/20">
-          <p className="text-xs text-muted-foreground mb-1">THIS WEEK</p>
-          <p className="text-2xl font-bold text-primary">KES 68</p>
+        <Card className="p-4 border-primary/20 card-glow">
+          <p className="text-xs text-muted-foreground mb-1 neon-text">THIS WEEK</p>
+          <p className="text-2xl font-bold text-primary neon-text-intense">KES 68</p>
         </Card>
 
-        <Card className="p-4 border-primary/20">
-          <p className="text-xs text-muted-foreground mb-1">PENDING PAYOUTS</p>
-          <p className="text-2xl font-bold">1</p>
+        <Card className="p-4 border-primary/20 card-glow">
+          <p className="text-xs text-muted-foreground mb-1 neon-text">PENDING PAYOUTS</p>
+          <p className="text-2xl font-bold neon-text-intense">1</p>
         </Card>
       </div>
 
       {/* Earnings Chart */}
-      <Card className="p-6">
+      <Card className="p-6 card-glow glow-green">
         <div className="flex items-center justify-between mb-6">
           <h3 className="text-lg font-bold">Weekly Earnings</h3>
           <Button variant="outline" className="border-primary/30" size="sm" onClick={handleExportReport}>
@@ -471,7 +471,7 @@ const MPesa = () => {
       <div className="grid md:grid-cols-2 gap-6">
         <Card className="p-6 border-accent/20">
           <div className="flex items-center gap-3 mb-4">
-            <div className="text-2xl font-bold text-accent">M-PESA</div>
+            <div className="text-2xl font-bold text-accent neon-text-intense">M-PESA</div>
           </div>
           <p className="text-sm text-muted-foreground mb-4">
             Mobile money transfer service
@@ -532,7 +532,7 @@ const MPesa = () => {
 
         <Card className="p-6 border-primary/20">
           <div className="flex items-center gap-3 mb-4">
-            <div className="text-2xl font-bold text-primary">S-SEPA</div>
+            <div className="text-2xl font-bold text-primary neon-text-intense">S-SEPA</div>
           </div>
           <p className="text-sm text-muted-foreground mb-4">
             European bank transfer

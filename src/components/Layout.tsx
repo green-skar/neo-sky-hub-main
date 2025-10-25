@@ -14,7 +14,8 @@ import {
   X,
   User,
   LogOut,
-  UserCircle
+  UserCircle,
+  Globe
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -55,10 +56,10 @@ export const Layout = ({ children }: LayoutProps) => {
       <Button
         variant="ghost"
         size="icon"
-        className="fixed top-4 left-4 z-50 lg:hidden btn-glow glow-cyan"
+            className="fixed top-4 left-4 z-50 lg:hidden btn-glow"
         onClick={() => setSidebarOpen(!sidebarOpen)}
       >
-        {sidebarOpen ? <X className="text-neon-cyan" /> : <Menu className="text-neon-cyan" />}
+        {sidebarOpen ? <X className="text-neon-blue" /> : <Menu className="text-neon-blue" />}
       </Button>
 
       {/* Sidebar */}
@@ -68,11 +69,16 @@ export const Layout = ({ children }: LayoutProps) => {
         } lg:translate-x-0 w-72 overflow-y-auto`}
       >
         <div className="p-6">
-          <div className="flex items-center gap-3 mb-8">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center font-bold text-primary-foreground glow-cyan">
-              K
-            </div>
-            <h1 className="text-xl font-bold text-neon-cyan">Kardiverse</h1>
+          <div className="relative mb-8">
+            {/* Subtle radial background glow - flush to edges */}
+            <div className="absolute inset-0 bg-gradient-radial from-primary/20 via-primary/10 to-transparent blur-sm"></div>
+            
+            {/* Logo image - completely flush with transparent background */}
+            <img 
+              src="/logo-transparent.png" 
+              alt="Kardiverse" 
+              className="h-16 w-full object-contain relative z-10"
+            />
           </div>
 
           <nav className="space-y-2">
@@ -84,13 +90,13 @@ export const Layout = ({ children }: LayoutProps) => {
                   key={item.path}
                   to={item.path}
                   onClick={() => setSidebarOpen(false)}
-                  className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-all ${
-                    isActive
-                      ? "bg-primary/10 text-primary border border-primary/20 glow-cyan"
-                      : "hover:bg-secondary text-muted-foreground hover:text-foreground hover:glow-cyan"
-                  }`}
+                      className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-all ${
+                        isActive
+                          ? "bg-primary/10 text-primary border border-primary/20 neon-glow"
+                          : "hover:bg-secondary text-muted-foreground hover:text-foreground glow-on-hover"
+                      }`}
                 >
-                  <Icon className={`w-5 h-5 ${isActive ? 'text-neon-cyan' : ''}`} />
+                  <Icon className={`w-5 h-5 ${isActive ? 'text-neon-blue' : ''}`} />
                   <span className="font-medium">{item.label}</span>
                 </Link>
               );
@@ -105,20 +111,24 @@ export const Layout = ({ children }: LayoutProps) => {
         <header className="border-b border-border/50 bg-card/50 backdrop-blur-sm sticky top-0 z-30">
           <div className="px-6 lg:px-8 py-4 flex items-center justify-between">
             <div className="flex-1 lg:ml-0 ml-16">
-              <h2 className="text-sm text-muted-foreground">Welcome back,</h2>
-              <p className="text-lg font-semibold">{user?.name || 'User'}</p>
+              <h2 className="text-sm text-muted-foreground text-glow">Welcome back,</h2>
+              <p className="text-lg font-semibold text-neon-blue">{user?.name || 'User'}</p>
             </div>
             <div className="flex items-center gap-4">
-              <div className="hidden md:flex items-center gap-2 px-3 py-1.5 bg-primary/10 border border-primary/20 rounded-full">
-                <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                <span className="text-sm text-primary font-medium">
+              <div className="hidden md:flex items-center gap-2 px-3 py-1.5 bg-primary/10 border border-primary/20 rounded-full btn-glow">
+                <div className="w-2 h-2 bg-primary rounded-full animate-pulse neon-glow" />
+                <span className="text-sm text-primary font-medium text-neon-blue">
                   {user?.status?.toUpperCase() || 'ACTIVE'}
                 </span>
               </div>
               
+              <div className="w-10 h-10 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center icon-glow">
+                <Globe className="w-5 h-5 text-primary text-neon-blue" />
+              </div>
+              
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" className="relative h-10 w-10 rounded-full">
+                  <Button variant="ghost" className="relative h-10 w-10 rounded-full btn-glow">
                     <Avatar className="h-10 w-10">
                       <AvatarImage src={user?.avatar} alt={user?.name} />
                       <AvatarFallback>
